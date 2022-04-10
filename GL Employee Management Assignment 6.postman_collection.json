@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "96a71edb-c1c5-4965-aef7-d6e62cefb548",
+		"name": "GL Employee Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "Get All Roles",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/role/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"role",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"NEW_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/role/create/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"role",
+								"create",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":3,\r\n    \"name\":\"NEW_ROLE_UPDATED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/role/create/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"role",
+								"create",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "Get All Employees Pagination",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/get/all/page?pageNo=0&pageSize=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"get",
+								"all",
+								"page"
+							],
+							"query": [
+								{
+									"key": "pageNo",
+									"value": "0"
+								},
+								{
+									"key": "pageSize",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Employee By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/get/by/id/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"get",
+								"by",
+								"id",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee By ID",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/delete/by/id/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"delete",
+								"by",
+								"id",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Employee By First Name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/search/first/name/Rajat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"search",
+								"first",
+								"name",
+								"Rajat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Sorted by First Name",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/sort?order=asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"sort"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatsolanki",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatsolanki",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userName\": \"manishvats\",\r\n    \"password\": \"aabbcc123\",\r\n    \"email\": \"manish@rajatjain.xyz\",\r\n    \"firstName\": \"Manish\",\r\n    \"lastName\": \"Vats\",\r\n    \"roles\": [\r\n        {\r\n            \"id\": 1,\r\n            \"name\": \"ADMIN\"\r\n        },\r\n        {\r\n            \"id\": 2,\r\n            \"name\": \"EMPLOYEE\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "rajatjain",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "rajatjain",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":21,\r\n    \"userName\": \"manishvats\",\r\n    \"email\": \"manish@rajatjain.xyz\",\r\n    \"firstName\": \"Manish\",\r\n    \"lastName\": \"Vats 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/em/v1/employee/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"em",
+								"v1",
+								"employee",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
